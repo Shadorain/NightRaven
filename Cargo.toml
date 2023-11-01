@@ -1,0 +1,14 @@
+[package]
+name = "nightraven"
+version = "0.1.0"
+edition = "2021"
+authors = ["Shadorain <jordanf7517@gmail.com>"]
+description = "A blazingly fast procedural macro in Rust for nesting types ergonimically! The bird of the shadows has found its nest!"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Shadorain/NightRaven"
+keywords = ["nested", "types", "derive"]
+categories = ["derive", "proc-macro"]
+
+[dependencies]
+nightraven-macros = { version = "0.1.0", path = "nightraven-macros" }
