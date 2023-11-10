@@ -87,9 +87,9 @@ impl Parse for NestedDerive {
     }
 }
 
-fn attrs_outer<'a>(
-    attrs: &'a [Attribute],
-) -> core::iter::Filter<core::slice::Iter<'a, Attribute>, fn(&&Attribute) -> bool> {
+fn attrs_outer(
+    attrs: &[Attribute],
+) -> core::iter::Filter<core::slice::Iter<'_, Attribute>, fn(&&Attribute) -> bool> {
     fn is_outer(attr: &&Attribute) -> bool {
         match attr.style {
             syn::AttrStyle::Outer => true,
